@@ -9,7 +9,8 @@
     "recommendation",
     "students"
   ],
-  "accent": "#588157",
+  "accent": "#c8622c",
+  "secondary_accent": "#2c7da9",
   "dashboard_metrics": [
     {
       "label": "Model Lift",
@@ -45,5 +46,52 @@
     "The primary value proposition is: Recommend next-best lessons from learner history, pace, and mastery signals.",
     "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
     "Typical stakeholders include analytics, operations, product, and leadership teams working on edtech, recommendation, students."
+  ],
+  "app_archetype": "workbench",
+  "ui_profile": {
+    "layout": "board",
+    "surface": "paper",
+    "font_stack": "\"Space Grotesk\", \"Segoe UI\", sans-serif",
+    "radius": 21,
+    "shadow": 55,
+    "eyebrow_style": "outline",
+    "module_columns": 2,
+    "hero_align": "left",
+    "headline_mode": "normal"
+  },
+  "app_modules": [
+    {
+      "label": "Workbench 01",
+      "title": "Candidate Builder",
+      "description": "Evaluate a single candidate, item, or entity against the decision logic.",
+      "endpoint": "/score",
+      "input_mode": "json",
+      "cta": "Evaluate Candidate",
+      "prefill": "{\n  \"features\": {\n    \"engagement_score\": 81,\n    \"tenure_days\": 207,\n    \"payment_miss_count\": 3,\n    \"segment\": \"enterprise\",\n    \"priority_flag\": true\n  }\n}",
+      "hint": "Candidate score and top factors will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Workbench 02",
+      "title": "Tradeoff Explorer",
+      "description": "Compare multiple operating metrics against a baseline to understand the tradeoffs.",
+      "endpoint": "/analyze",
+      "input_mode": "json",
+      "cta": "Explore Tradeoffs",
+      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 42.3,\n    \"activation\": 41.5,\n    \"retention\": 53.6,\n    \"revenue\": 87.1\n  },\n  \"baseline\": {\n    \"acquisition\": 38.92,\n    \"activation\": 38.18,\n    \"retention\": 49.31,\n    \"revenue\": 80.13\n  }\n}",
+      "hint": "Tradeoff summary will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Workbench 03",
+      "title": "Next-Step Planner",
+      "description": "Turn the current signals into an implementation-ready next-step recommendation.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Plan Next Step",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for EdTech Learning Path Recommender.\",\n  \"features\": {\n    \"engagement_score\": 81,\n    \"tenure_days\": 207,\n    \"payment_miss_count\": 3,\n    \"segment\": \"enterprise\",\n    \"priority_flag\": true\n  },\n  \"metrics\": {\n    \"acquisition\": 42.3,\n    \"activation\": 41.5,\n    \"retention\": 53.6,\n    \"revenue\": 87.1\n  }\n}",
+      "hint": "Recommended actions and rationale will appear here.",
+      "span": "wide"
+    }
   ]
 }
