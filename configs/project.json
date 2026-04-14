@@ -1,0 +1,49 @@
+{
+  "slug": "edtech-learning-path-recommender",
+  "title": "EdTech Learning Path Recommender",
+  "project_type": "ml",
+  "domain": "EdTech",
+  "summary": "Recommend next-best lessons from learner history, pace, and mastery signals.",
+  "tags": [
+    "edtech",
+    "recommendation",
+    "students"
+  ],
+  "accent": "#588157",
+  "dashboard_metrics": [
+    {
+      "label": "Model Lift",
+      "value": "76%",
+      "delta": "+6.4%"
+    },
+    {
+      "label": "Serving P95",
+      "value": "129ms",
+      "delta": "-12ms"
+    },
+    {
+      "label": "Data Freshness",
+      "value": "8h",
+      "delta": "steady"
+    }
+  ],
+  "sample_features": {
+    "engagement_score": 81,
+    "tenure_days": 207,
+    "payment_miss_count": 3,
+    "segment": "enterprise",
+    "priority_flag": true
+  },
+  "sample_metrics": {
+    "acquisition": 42.3,
+    "activation": 41.5,
+    "retention": 53.6,
+    "revenue": 87.1
+  },
+  "knowledge_base": [
+    "EdTech Learning Path Recommender is positioned as a EdTech starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Recommend next-best lessons from learner history, pace, and mastery signals.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on edtech, recommendation, students."
+  ]
+}
